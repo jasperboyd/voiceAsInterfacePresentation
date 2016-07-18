@@ -123,6 +123,14 @@ h1 {
     line-height: 1.5;
     text-align:left; 
 }
+h2{ 
+    margin-top:18px;
+    color: black;
+    font-weight: 900;
+    font-size: 36px; 
+    line-height: 1.5;
+    text-align:left;
+}
 
 /*
     Because the main point behind the impress.js demo is to demo impress.js
