@@ -125,7 +125,8 @@ h1 {
     font-weight: 900; 
     font-size: 72px;
     line-height: 1.5;
-    text-align:left; 
+    text-align:left;
+    letter-spacing: 2px; 
 }
 h2{ 
     margin-top:18px;
@@ -137,6 +138,8 @@ h2{
 }
 li {
     margin: 36px 10px 0 10px; 
+    font-size: 18px; 
+    font-weight: 800;
 }
 
 /*
