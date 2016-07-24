@@ -19,7 +19,7 @@ function startVoice(){
         };
 
         annyang.addCommands(commands);
-        annyang.start();
+        annyang.start({ autoRestart: true, continuous: true });
     }
 }
 
