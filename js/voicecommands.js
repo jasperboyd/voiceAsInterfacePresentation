@@ -3,6 +3,8 @@ api.init();
 
 function startVoice(){
     if (annyang) {
+        annyang.debug(true);
+    
         var commands = {
             'next': function() {
                 console.log("you said 'next'!");
