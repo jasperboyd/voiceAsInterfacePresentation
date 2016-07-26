@@ -1,0 +1,65 @@
+h1, h2, h3, h4, h5, h6, p, li{
+    font-family:"Source Code Pro";
+}
+
+h1 {
+    margin-top: 9px; 
+    color: black; 
+    font-weight: 900; 
+    font-size: 48px;
+    line-height: 1.5;
+    text-align:left;
+    letter-spacing: 2px; 
+}
+
+h2 { 
+    margin-top:9px;
+    color: black;
+    font-weight: 900;
+    font-size: 36px; 
+    line-height: 1.5;
+    text-align:left;
+}
+
+h3 {
+    font-size: 24px; 
+}
+
+h6 {
+    margin-top: 18px;
+    font-size: 12px; 
+}
+
+section h1 {
+    font-size:30px;
+}
+
+
+section h2 {
+    font-size:24px;
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    font-weight: 200;
+}
+
+ul {
+    margin-left: 32px;
+}
+
+li {
+    margin: 18px 10px 0 0; 
+    font-size: 24px; 
+    font-weight: 400;
+}
+
+.syntaxhighlighter {
+    font-size: 20px !important;
+}
+
+.definition {
+    font-weight:200; 
+}
+
+.center { 
+    text-align:center;
+}
