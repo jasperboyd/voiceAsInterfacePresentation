@@ -15,6 +15,7 @@
 <link type="text/css" href="css/skeleton.css" rel="stylesheet" />
 <link type="text/css" href="css/impress.css" rel="stylesheet" />
 <link type="text/css" href="css/shCoreDefault.css" rel="stylesheet"/>
+<link type="text/css" href="css/custom.css" rel="stylesheet" />
 
 
 <link rel="shortcut icon" href="favicon.png" />
@@ -75,22 +76,121 @@
         <h1>Why should you care?</h1>
     </div>
 
-    <div class="step" data-x="2000" data-y="-1500" data-z="0" data-scale="5" data-rotate="60">
-        <h1>$$$</h1>
+    <div class="step" data-x="4000" data-y="-4000" data-z="1000" data-scale="1" data-rotate="60">
+        <h1>$everal Platforms</h1>
         <ul>
-            <li></li>
+           <li>Developer Access to Siri and OK Google</li>
+           <li>Limitless APIs to integrate with</li>
+           <li>Larger site audience</li>
+           <li>Wearables</li> 
         </ul>
     </div>
 
-    <div class="step slide" data-x="1000" data-y="-1500">
-        <h1>The Benefits</h1>
-        <p>VUIs have become more commonplace, and people are taking advantage of the value that these hands-free, eyes-free interfaces provide in many situations.</p>
+    <div class="step" data-x="2000" data-y="-1500" data-z="1000" data-scale="1" data-rotate="60">
+        <h1>The Guts of the Presentation</h1>
+        <h2>voicecommands.js</h2>
+        <pre class="brush:javascript;">
+            var api = impress();
+            api.init();
+
+            function startVoice(){
+                if (annyang) {
+                
+                    var commands = {
+                        'next': function() {
+                            api.next();
+                        },
+                        'previous': function() {
+                            api.prev();
+                        },
+                    };
+
+                    annyang.addCommands(commands);
+                    annyang.start({ autoRestart: true, continuous: true });
+                }
+            }
+        </pre>
     </div>
 
-    <div class="step slide" data-x="2000" data-y="-1500">
-        <h1>The Challenges</h1>
-        <p>People have very little patience for a machine that doesn't understand.</p>
+    <div class="step" data-x="2000" data-y="0" data-z="1000" data-scale="1" data-rotate="90">
+        <h1>And The Guts of the Guts</h1>
+        <h2>annyang.js</h2>
+        <pre class="brush:javascript;">
+            init: function(commands, resetCommands) {
+
+                recognition = new SpeechRecognition();
+
+                recognition.maxAlternatives = 5;
+
+                recognition.continuous = root.location.protocol === 'http:';
+
+                recognition.lang = 'en-US';
+
+                recognition.onstart   = function() {
+                    //startup implementation
+                };
+
+                recognition.onerror   = function(event) {
+                    //error implementation
+                };
+
+                recognition.onend     = function() {
+                    //perform cleanup
+                };
+
+                recognition.onresult  = function(event) {
+                    // Map the results to an array
+                    var SpeechRecognitionResult = event.results[event.resultIndex];
+                    var results = [];
+                    for (var k = 0; k < SpeechRecognitionResult.length; k++) {
+                        results[k] = SpeechRecognitionResult[k].transcript;
+                    }
+
+                    parseResults(results);
+                };
+            }
+        </pre>
+        <h6>https://github.com/TalAter/annyang</h6>
     </div>
+
+    <div class="step row" data-x="4000" data-y="0" data-z="1000" data-scale="1" data-rotate="90">
+            <div class="row">
+                <section class="twelve columns">
+                    <h1>Just one implementation of the Web Speech API</h1>  
+                </section>
+            </div> 
+            <div class="row">
+                <section class="six columns">
+                    <h2>Speech Recognition</h2>
+                    <ul>
+                        <li>SpeechRecognition</li>
+                        <li>SpeechRecognitionAlternative</li>
+                        <li>SpeechRecognitionError</li>
+                        <li>SpeechRecognitionEvent</li>
+                        <li>SpeechGrammar</li>
+                        <li>SpeechGrammarList</li>
+                        <li>SpeechRecognitionResult</li>
+                        <li>SpeechRecognitionResultList</li>
+                    </ul>
+                </section>
+                <section class="six columns">
+                    <h2>Speech Synthesis</h2>
+                    <ul>
+                        <li>SpeechSynthesis</li>
+                        <li>SpeechSynthesisErrorEvent</li>
+                        <li>SpeechSynthesisEvent</li>
+                        <li>SpeechSynthesisUtterance</li>
+                        <li>SpeechSynthesisVoice</li> 
+                        <li>Window.speechSynthesis<li>
+                    </ul>
+                </section>
+            </div>
+    </div> 
+
+    <div class="step" data-x="6000" data-y="0" data-z="1000" data-scale="1" data-rotate="90">
+        <h1></h1>
+    </div> 
+
 
     <div class="step slide" data-x="3000" data-y="-1500">
         <h1>Making your own voice assistent</h1>
@@ -112,7 +212,7 @@
             </pre>
         </span>
         <br>
-        <span style="font-size: 20px">
+        <span >
             <pre class="brush: javascript;">
             var BigBoy = function(config) {
 
@@ -131,7 +231,7 @@
     </div>
 
     <div class="step slide" data-x="6000" data-y="-1500">
-        <span style="font-size: 20px">
+        <span >
             <pre class="brush: javascript;">
           BigBoy.prototype._onVoice = function(msg) {
             ...
@@ -148,7 +248,7 @@
     </div>
 
     <div class="step slide" data-x="7000" data-y="-1500">
-        <span style="font-size: 20px">
+        <span >
             <pre class="brush: javascript;">
           ffmpeg.on('exit', function(code) {
             var newBuffer = Buffer.concat(stdout);
@@ -170,48 +270,48 @@
     </div>
 
     <div class="step slide" data-x="8000" data-y="-1500">
-        <span style="font-size: 20px">
+        <span >
             <pre class="brush: javascript;">
             </pre>
         </span>
     </div>
 
     <div class="step slide" data-x="9000" data-y="-1500">
-        <span style="font-size: 20px">
+        <span >
             <pre class="brush: javascript;">
             </pre>
         </span>
     </div>
 
     <div class="step slide" data-x="10000" data-y="-1500">
-        <span style="font-size: 20px">
+        <span >
             <pre class="brush: javascript;">
             </pre>
         </span>
     </div>
 
     <div class="step slide" data-x="11000" data-y="-1500">
-        <span style="font-size: 20px">
+        <span >
             <pre class="brush: javascript;">
             </pre>
         </span>
     </div>
 
     <div class="step slide" data-x="12000" data-y="-1500">
-        <span style="font-size: 20px">
+        <span >
             <pre class="brush: javascript;">
             </pre>
         </span>
     </div>
 
     <div class="step slide" data-x="13000" data-y="-1500">
-        <span style="font-size: 20px">
+        <span >
             <pre class="brush: javascript;">
             </pre>
         </span>
     </div>
     <div class="step slide" data-x="14000" data-y="-1500">
-        <span style="font-size: 20px">
+        <span >
             <pre class="brush: javascript;">
             </pre>
         </span>
