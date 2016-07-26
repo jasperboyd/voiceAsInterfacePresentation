@@ -107,13 +107,13 @@
         <p><a style="font-size: 20px" target="_blank" href="https://github.com/yagop/node-telegram-bot-api">https://github.com/yagop/node-telegram-bot-api</a></p>
         <br>
         <span style="font-size: 20px">
-		      <pre class="brush: javascript;">
+            <pre class="brush: javascript;">
             TelegramBot = require('node-telegram-bot-api');
-          </pre>
+            </pre>
         </span>
         <br>
         <span style="font-size: 20px">
-		      <pre class="brush: javascript;">
+            <pre class="brush: javascript;">
             var BigBoy = function(config) {
 
               this.config = config || {};
@@ -126,13 +126,13 @@
               this.telegram.setWebHook(`${this.config.webhook}bot${this.config.token}`);
               ...
               this.telegram.on('voice', this._onVoice.bind(this)
-          </pre>
+            </pre>
         </span>
     </div>
 
     <div class="step slide" data-x="6000" data-y="-1500">
-      <span style="font-size: 20px">
-        <pre class="brush: javascript;">
+        <span style="font-size: 20px">
+            <pre class="brush: javascript;">
           BigBoy.prototype._onVoice = function(msg) {
             ...
             this.telegram.getFileLink(msg.voice.file_id).then((link) => {
@@ -143,13 +143,13 @@
               ffmpeg.stdout.on('data', function(data) {
                 stdout.push(data);
               });
-        </pre>
-      </span>
+            </pre>
+        </span>
     </div>
 
     <div class="step slide" data-x="7000" data-y="-1500">
-      <span style="font-size: 20px">
-        <pre class="brush: javascript;">
+        <span style="font-size: 20px">
+            <pre class="brush: javascript;">
           ffmpeg.on('exit', function(code) {
             var newBuffer = Buffer.concat(stdout);
             var speech = s2t.transcript(newBuffer, {
@@ -165,56 +165,56 @@
               console.warn('stt:',error);
             });
           });
-        </pre>
-      </span>
+            </pre>
+        </span>
     </div>
 
     <div class="step slide" data-x="8000" data-y="-1500">
-      <span style="font-size: 20px">
-        <pre class="brush: javascript;">
-        </pre>
-      </span>
+        <span style="font-size: 20px">
+            <pre class="brush: javascript;">
+            </pre>
+        </span>
     </div>
 
     <div class="step slide" data-x="9000" data-y="-1500">
-      <span style="font-size: 20px">
-        <pre class="brush: javascript;">
-        </pre>
-      </span>
+        <span style="font-size: 20px">
+            <pre class="brush: javascript;">
+            </pre>
+        </span>
     </div>
 
     <div class="step slide" data-x="10000" data-y="-1500">
-      <span style="font-size: 20px">
-        <pre class="brush: javascript;">
-        </pre>
-      </span>
+        <span style="font-size: 20px">
+            <pre class="brush: javascript;">
+            </pre>
+        </span>
     </div>
 
     <div class="step slide" data-x="11000" data-y="-1500">
-      <span style="font-size: 20px">
-        <pre class="brush: javascript;">
-        </pre>
-      </span>
+        <span style="font-size: 20px">
+            <pre class="brush: javascript;">
+            </pre>
+        </span>
     </div>
 
     <div class="step slide" data-x="12000" data-y="-1500">
-      <span style="font-size: 20px">
-        <pre class="brush: javascript;">
-        </pre>
-      </span>
+        <span style="font-size: 20px">
+            <pre class="brush: javascript;">
+            </pre>
+        </span>
     </div>
 
     <div class="step slide" data-x="13000" data-y="-1500">
-      <span style="font-size: 20px">
-        <pre class="brush: javascript;">
-        </pre>
-      </span>
+        <span style="font-size: 20px">
+            <pre class="brush: javascript;">
+            </pre>
+        </span>
     </div>
     <div class="step slide" data-x="14000" data-y="-1500">
-      <span style="font-size: 20px">
-        <pre class="brush: javascript;">
-        </pre>
-      </span>
+        <span style="font-size: 20px">
+            <pre class="brush: javascript;">
+            </pre>
+        </span>
     </div>
 
 
