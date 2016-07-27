@@ -60,6 +60,10 @@ li {
     font-weight:200; 
 }
 
-.center { 
+.center {
     text-align:center;
+}
+
+img .logo{
+    padding: 20px;
 }
