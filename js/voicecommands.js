@@ -56,7 +56,7 @@ function startVoice(){
                 msg.pitch = chosenPitch; 
                 window.speechSynthesis.speak(msg); 
             },
-            'computer use your original voice' : function() {
+            'computer (use your original) voice' : function() {
                 chosenVoice = window.speechSynthesis.getVoices()[0];
                 var msg = new SpeechSynthesisUtterance("This is my new voice");
                 msg.voice = chosenVoice;
@@ -115,11 +115,18 @@ function startVoice(){
                 msg.pitch = chosenPitch; 
                 window.speechSynthesis.speak(msg); 
             },
-            'computer get me a beer' : function() {
-                var msg = new SpeechSynthesisUtterance("What a cruel thing to ask a web application");
+            'computer get (me a) :thing' : function(thing) {
+                var msg = new SpeechSynthesisUtterance("Get your own " + thing);
                 msg.voice = chosenVoice; 
                 msg.rate = chosenRate; 
                 msg.pitch = chosenPitch; 
+                window.speechSynthesis.speak(msg); 
+            },
+            'computer repeat (to me a) *phrase' : function(phrase){
+                var msg = new SpeechSynthesisUttterance(phrase); 
+                msg.voice = chosenVoice; 
+                msg.rate = chosenRate; 
+                msg.pitch = chosenPitch;
                 window.speechSynthesis.speak(msg); 
             }
         };
