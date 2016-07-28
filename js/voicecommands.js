@@ -6,6 +6,8 @@ function startVoice(){
         annyang.debug(true);
 
         var mute = false; 
+        var voices = window.speechSynthesis.getVoices();
+        var chosenVoice = voices[0]; 
     
         var commands = {
             'next': function() {
@@ -38,6 +40,11 @@ function startVoice(){
             'computer are you listening' : function() {
                 var msg = new SpeechSynthesisUtterance("I'm listening with baited breath");
                 window.speechSynthesis.speak(msg); 
+            },
+            'computer change your voice' : function() {
+                var rolledDice = Math.floor((Math.random() * voices.length));//0-length
+                chosenVoice = voices[rolledDice]; 
+
             }
         };
 
