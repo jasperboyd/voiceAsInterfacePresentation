@@ -145,6 +145,23 @@
         </pre>
     </div>
 
+    <div class="step" data-x="2000" data-y="0" data-z="1000" data-scale="1" data-rotate="40">
+        <h1>More Advanced Commands with annyang</h1>
+        <pre class="brush:javascript">
+            var commands = {
+                'computer get me :thing' : function (thing){
+                    //thing will be a single word
+                },
+                'computer repeat to me *phrase' : function(phrase){
+                    //phrase will be whatever came after 'me'
+                },
+                'computer (please have a) drink' : function(){
+                    //the interpreter will match computer drink and computer please have a drink
+                }
+            }
+        </pre>
+    </div> 
+
     <div class="step" data-x="2000" data-y="0" data-z="1000" data-scale="1" data-rotate="90">
         <h1>And The Guts of the Guts</h1>
         <h2>annyang.js</h2>

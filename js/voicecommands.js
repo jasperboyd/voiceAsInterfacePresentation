@@ -58,7 +58,6 @@ function startVoice(){
             },
             'computer use your original voice' : function() {
                 chosenVoice = window.speechSynthesis.getVoices()[0];
-                console.log("the new voice", rolledDice, window.speechSynthesis.getVoices()[rolledDice]); 
                 var msg = new SpeechSynthesisUtterance("This is my new voice");
                 msg.voice = chosenVoice;
                 msg.rate = chosenRate; 
