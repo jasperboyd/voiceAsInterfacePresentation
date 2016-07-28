@@ -221,9 +221,22 @@
         </pre> 
     </div> 
 
-     <div class="step" data-x="8000" data-y="0" data-z="1000" data-scale="1" data-rotate="90">
-        <h1>Limitations</h1>
+    <div class="step" data-x="8000" data-y="0" data-z="1000" data-scale="1" data-rotate="90">
+        <h1>Change your websites voice!</h1>
+        <pre class="brush:javascript;">
+            var msg = new SpeechSynthesisUtterance('Hello Worcester');
+            msg.voice = voices[2];//accessed via window.speechSynthesis.voices 
+            msg.volume = 1; // 0 to 1
+            msg.rate = 1; // 0.1 to 10
+            msg.pitch = 2; //0 to 2
+            window.speechSynthesis.speak(msg);
+        </pre> 
+    </div> 
+     
+    <div class="step" data-x="10000" data-y="0" data-z="1000" data-scale="1" data-rotate="90">
+        <h1>Limitations For Speech In The Browser</h1>
         <ul>
+            <li>Recognition</li>
             <li>Figuring out when one command ends and the other begins</li>
             <li>Cutting through the noise</li>
             <li>Compatibility with older devices</li>
