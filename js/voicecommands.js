@@ -108,7 +108,7 @@ function startVoice(){
                 window.speechSynthesis.speak(msg); 
             },
             'computer get me a beer' : function() {
-                var msg = newSpeechSynthesisUtterance("What a cruel thing to ask a web application");
+                var msg = new SpeechSynthesisUtterance("What a cruel thing to ask a web application");
                 msg.voice = chosenVoice; 
                 msg.rate = chosenRate; 
                 msg.pitch = chosenPitch; 
