@@ -122,8 +122,8 @@ function startVoice(){
                 msg.pitch = chosenPitch; 
                 window.speechSynthesis.speak(msg); 
             },
-            'computer repeat (to me a) *phrase' : function(phrase){
-                var msg = new SpeechSynthesisUttterance(phrase); 
+            'computer repeat (to me) *phrase' : function(phrase){
+                var msg = new SpeechSynthesisUtterance(phrase); 
                 msg.voice = chosenVoice; 
                 msg.rate = chosenRate; 
                 msg.pitch = chosenPitch;
