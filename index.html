@@ -53,7 +53,7 @@
         <ul>
             <li>Customer Service Phone Systems</li>
             <li>Dictation Software</li>
-            <li>Language Learning Programs</li>
+            <li>Language Learning Software</li>
         </ul>
     </div>
 
@@ -169,6 +169,7 @@
             <div class="row">
                 <section class="twelve columns">
                     <h1>Just one implementation of the Web Speech API</h1>  
+                    <h6>https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API</h6>
                 </section>
             </div> 
             <div class="row">
@@ -200,7 +201,11 @@
     </div> 
 
     <div class="step" data-x="6000" data-y="0" data-z="1000" data-scale="1" data-rotate="90">
-        <h1></h1>
+        <h1>Make your website speak!</h1>
+        <pre class="brush:javascript;">
+            var msg = new SpeechSynthesisUtterance('Proceeding to next slide');
+            window.speechSynthesis.speak(msg);
+        </pre> 
     </div> 
 
 
