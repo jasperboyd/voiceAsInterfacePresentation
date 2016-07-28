@@ -301,49 +301,37 @@
             </pre>
         </span>
     </div>
-    
+
 
     <div class="step slide" data-x="9000" data-y="-1500">
-        <span >
-            <pre class="brush: javascript;">
-            </pre>
-        </span>
+        RiveScript:
+        (https://www.rivescript.com)
+        <img src="https://i.gyazo.com/a58d5dcbf636a2ef87e50a67ada4e355.png">
     </div>
 
     <div class="step slide" data-x="10000" data-y="-1500">
-        <span >
-            <pre class="brush: javascript;">
-            </pre>
-        </span>
+        Ivona:
+        (ivona.com)
+        <img src="https://i.gyazo.com/6f9ae26fb833077acee8860db3dcc4c5.png" width="600" height="600">
     </div>
 
     <div class="step slide" data-x="11000" data-y="-1500">
+        Use FFmpeg to convert audio to OGG
         <span >
             <pre class="brush: javascript;">
+                var ffmpeg = spawn('ffmpeg', [
+                    '-seekable', '0',
+                    '-i', url,
+                    '-f', 'ogg',
+                    'pipe:1'
+                ]);
             </pre>
         </span>
-    </div>
 
-    <div class="step slide" data-x="12000" data-y="-1500">
-        <span >
-            <pre class="brush: javascript;">
-            </pre>
-        </span>
+        <br />
+        <br />
+        <p>Send the audio output using Telegram API</p>
     </div>
-
-    <div class="step slide" data-x="13000" data-y="-1500">
-        <span >
-            <pre class="brush: javascript;">
-            </pre>
-        </span>
-    </div>
-    <div class="step slide" data-x="14000" data-y="-1500">
-        <span >
-            <pre class="brush: javascript;">
-            </pre>
-        </span>
-    </div>
-
 
 
 </div>
