@@ -232,7 +232,7 @@
     <div class="step" data-x="8000" data-y="0" data-z="1000" data-scale="1" data-rotate="90">
         <h1>Change your websites voice!</h1>
         <pre class="brush:javascript;">
-            var msg = new SpeechSynthesisUtterance('Hello Worcester');
+            var msg = new SpeechSynthesisUtterance('Home of Turtle Boy');
             msg.voice = voices[2];//accessed via window.speechSynthesis.voices 
             msg.volume = 1; // 0 to 1
             msg.rate = 1; // 0.1 to 10
@@ -244,7 +244,7 @@
     <div class="step" data-x="10000" data-y="0" data-z="1000" data-scale="1" data-rotate="90">
         <h1>Limitations For Speech In The Browser</h1>
         <ul>
-            <li>Recognition</li>
+            <li>Fuzzy Recognition</li>
             <li>Figuring out when one command ends and the other begins</li>
             <li>Cutting through the noise</li>
             <li>Compatibility with older devices</li>
@@ -252,14 +252,24 @@
         </ul>
     </div>
 
+    <div class="step" data-x="10000" data-y="0" data-z="1000" data-scale="1" data-rotate="90">
+        <h1>Limitations For VUI</h1>
+        <ul>
+            <li>User's patience when they don't get what they want</li>
+            
+        </ul>
+    </div>
+    
     <div class="step" data-x="12000" data-y="0" data-z="0" data-scale="2" data-rotate="90">
         <h1>Next Steps</h1>
         <ul>
-            <li>Make it 'smarter' with intent matching a la Alexa</li>
+            <li>Make it 'smarter' with intent matching (a la Alexa)</li>
             <li>Error Handling and hints</li>
             <li>A Better facade</li> 
         </ul>
     </div> 
+
+    <!-- Ian put your slides here -->
 
     <div class="step slide" data-x="3000" data-y="-1500">
         <h1 class="center">Making your own voice assistant</h1>
