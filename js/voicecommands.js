@@ -6,8 +6,7 @@ function startVoice(){
         annyang.debug(true);
 
         var mute = false; 
-        var voices = window.speechSynthesis.getVoices();
-        var chosenVoice = voices[0]; 
+        var chosenVoice = window.speechSynthesis.getVoices()[0]; 
         var chosenRate = 1; 
         var chosenPitch = 2; 
 
@@ -57,9 +56,19 @@ function startVoice(){
                 msg.pitch = chosenPitch; 
                 window.speechSynthesis.speak(msg); 
             },
+            'computer use your original voice' : function() {
+                chosenVoice = window.speechSynthesis.getVoices()[0];
+                console.log("the new voice", rolledDice, window.speechSynthesis.getVoices()[rolledDice]); 
+                var msg = new SpeechSynthesisUtterance("This is my new voice");
+                msg.voice = chosenVoice;
+                msg.rate = chosenRate; 
+                msg.pitch = chosenPitch; 
+                window.speechSynthesis.speak(msg); 
+            },
             'computer change your voice' : function() {
-                var rolledDice = Math.floor((Math.random() * voices.length));//0-length
-                chosenVoice = voices[rolledDice]; 
+                var rolledDice = Math.floor((Math.random() * window.speechSynthesis.getVoices().length));//0-length
+                chosenVoice = window.speechSynthesis.getVoices()[rolledDice];
+                console.log("the new voice", rolledDice, window.speechSynthesis.getVoices()[rolledDice]); 
                 var msg = new SpeechSynthesisUtterance("This is my new voice");
                 msg.voice = chosenVoice;
                 msg.rate = chosenRate; 
@@ -91,7 +100,7 @@ function startVoice(){
                 msg.pitch = chosenPitch; 
                 window.speechSynthesis.speak(msg); 
             },
-            'computer talk low' : function() {
+            'computer decrease pitch' : function() {
                 chosenPitch = 0; 
                 var msg = new SpeechSynthesisUtterance("I have a deep voice");
                 msg.voice = chosenVoice;
@@ -99,7 +108,7 @@ function startVoice(){
                 msg.pitch = chosenPitch; 
                 window.speechSynthesis.speak(msg); 
             },
-            'computer talk high' : function() {
+            'computer increase pitch' : function() {
                 chosenPitch = 2; 
                 var msg = new SpeechSynthesisUtterance("Increasing pitch now");
                 msg.voice = chosenVoice; 
