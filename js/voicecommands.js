@@ -34,6 +34,10 @@ function startVoice(){
                 mute = false; 
                 var msg = new SpeechSynthesisUtterance('Thank you for the permission'); 
                 window.speechSynthesis.speak(msg); 
+            },
+            'computer are you listening' : function() {
+                var msg = new SpeechSynthesisUtterance("I'm listening with baited breath");
+                window.speechSynthesis.speak(msg); 
             }
         };
 
